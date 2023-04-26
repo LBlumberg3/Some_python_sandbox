@@ -32,13 +32,14 @@ def addWordToDictionary(word, dict):
 def processBookIntoIndex(book, wordCountIndex):
     wordList = splitBookToList(book)
     for word in wordList:
-        temp = handleWord(word)
-        addWordToDictionary(temp, wordCountIndex) 
+        temp = handleWord(word) # temp is the uppercase version of the word with no whitespace, period, or commas 
+        addWordToDictionary(temp, wordCountIndex)
 
-def printWordIndex(dict):
+def printWordIndex(dict): 
     print("Dictionary Contents:\n")
     for word in dict:
         print("Word: '" + word + "' Count: " + str(dict[word]) + "\n")
+    # str(dict[word]) allows you to convert the number to a string before printing it
 
 def main():
     # Defining the variables used in this method
@@ -46,7 +47,7 @@ def main():
     targetWord = "AGE"
     book = getBook()
 
-    processBookIntoIndex(book, wordCountIndex)
+    processBookIntoIndex(book, wordCountIndex) # calling a method that calls other methods internally
     print("Finished processing book into word index")
     printWordIndex(wordCountIndex)
     
