@@ -37,6 +37,8 @@ while inputOption != 'continue':
 quote_cost = get_carpet_quote(room, userCarpetType, userQuoteOptions, userPromoCode)
 print(quote_cost)
 
+
+
 continueLoop = true
 while(continueLoop):
     carpetInput = input("Enter the type of carpet: ")
