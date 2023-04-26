@@ -7,6 +7,13 @@ options_dictionary = {
     'back_massage': 100000
 }
 
+carpet_types = {
+    'berber',
+    'shag',
+    'I_dont_know_carpet_types',
+    'other'
+}
+
 roomLength = input("Enter in the room length: ")
 roomWidth = input("Enter in the room width: ")
 room = [roomLength, roomWidth]
@@ -29,3 +36,16 @@ while inputOption != 'continue':
 
 quote_cost = get_carpet_quote(room, userCarpetType, userQuoteOptions, userPromoCode)
 print(quote_cost)
+
+continueLoop = true
+while(continueLoop):
+    carpetInput = input("Enter the type of carpet: ")
+    if(carpetInput == 'berber'):
+        # Do something with the cost for berber carpets
+        continueLoop = false
+    elif(carpetInput == 'shag'):
+        # Do something with the cost for shag carpets
+        continueLoop = false
+    else:
+        print("Invalid choice!")
+        # Do nothing else, b/c continueLoop is already true
